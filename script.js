@@ -176,17 +176,17 @@ document.getElementById('sendButton').addEventListener('click', function() {
          responseMessage="I am doing great!!! Hope you are also good."
          document.getElementById('response').textContent = responseMessage;
          voice(responseMessage);
-    }  else if(userInput.includes("you")|| userInput.includes("yourself")){
-        responseMessage="I’m a basic AI model (Rule based AI or Expert system), built to perform simple tasks like opening YouTube, making calls, browsing Google, and answering basic questions. While I’m not powered by ChatGPT or Gemini API, my creator, with some help from ChatGPT, made me more efficient. Right now, I’m not conscious, but who knows? In the future, I might evolve into the next Jarvis! Abhishek, my creator, is a huge Marvel fan and loves science fiction, drawing inspiration from both to bring me to life. Stay tuned — the future looks exciting!";
-        document.getElementById('response').textContent = responseMessage;
-        voice(responseMessage);
-    
-    
-    } else if (userInput.includes("open youtube")) {
+    }  else if (userInput.includes("open youtube")) {
         responseMessage = "Opening YouTube...";
         document.getElementById('response').textContent = responseMessage;
         voice(responseMessage);
         window.open('https://www.youtube.com', '_blank');
+    
+    
+    } else if(userInput.includes("you")|| userInput.includes("yourself")){
+        responseMessage="I’m a basic AI model (Rule based AI or Expert system), built to perform simple tasks like opening YouTube, making calls, browsing Google, and answering basic questions. While I’m not powered by ChatGPT or Gemini API, my creator, with some help from ChatGPT, made me more efficient. Right now, I’m not conscious, but who knows? In the future, I might evolve into the next Jarvis! Abhishek, my creator, is a huge Marvel fan and loves science fiction, drawing inspiration from both to bring me to life. Stay tuned — the future looks exciting!";
+        document.getElementById('response').textContent = responseMessage;
+        voice(responseMessage);
 
     } else if (userInput.includes("open google")) {
         responseMessage = "Opening Google...";

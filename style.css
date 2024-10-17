@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(rgb(23, 23, 106),black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background: rgb(26, 3, 29);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 60%;
+    min-width: 350px;
+    text-align: center;
+}
+#timeDisplay{
+    color: rgb(247, 183, 255);
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ffffff, #f6fdff,rgb(215, 215, 198));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header p {
+    font-size: 16px;
+    color: #9b9b9b;
+}
+#greeting{
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, #00ff33, #00c8ff,rgb(251, 255, 8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.info {
+    margin: 10px 0;
+}
+
+.input-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    margin-right: 10px;
+    background-color: #e2ffff;
+}
+
+.buttons button {
+    background: linear-gradient(violet,green);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.buttons button i {
+    font-size: 16px;
+}
+
+.buttons button:hover {
+    background: linear-gradient(rgb(90, 40, 90),rgb(29, 79, 29));
+}
+#response{
+    font-size: 18px;
+    padding: 30px;
+    color: #f6fdff;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+@media (max-width: 800px) {
+    input[type="text"] {
+        width: 100%;
+        padding: 6px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        outline: none;
+        margin-right: 10px;
+        background-color: #e2ffff;
+    }
+    #greeting{
+        font-size: 24px;
+    }
+    #response{
+        font-size: 16px;
+    }
+    .buttons button {
+        background: linear-gradient(violet,green);
+        color: white;
+        border: none;
+        padding: 8px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+    
+    .buttons button i {
+        font-size: 13px;
+    }
+}
+    

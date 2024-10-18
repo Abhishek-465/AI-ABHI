@@ -188,11 +188,22 @@ document.getElementById('sendButton').addEventListener('click', function() {
         document.getElementById('response').textContent = responseMessage;
         voice(responseMessage);
 
-    } else if (userInput.includes("open google")) {
+    } else if (userInput.includes("time") || userInput.includes("date")) {
+        const currenttime = new Date(); // Create a new Date object to get current date and time
+        responseMessage = `Current date and time is ${currenttime.toDateString()} ${currenttime.getHours()}:${currenttime.getMinutes().toString().padStart(2, '0')}`;
+        document.getElementById('response').textContent = responseMessage;
+        voice(responseMessage); // Assuming "voice" is a function that reads out the response
+    }else if (userInput.includes("open google")) {
         responseMessage = "Opening Google...";
         document.getElementById('response').textContent = responseMessage;
         voice(responseMessage);
         window.open('https://www.google.com', '_blank');
+        
+    }else if (userInput.includes("open chatgpt")) {
+        responseMessage = "Opening ChatGPT...";
+        document.getElementById('response').textContent = responseMessage;
+        voice(responseMessage);
+        window.open('https://chatgpt.com/', '_blank');
 
     } else if (userInput.includes("call")) {
         let phoneNumber = userInput.match(/\d+/); // Extracts the first number found in the input

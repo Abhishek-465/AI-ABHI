@@ -199,7 +199,7 @@ document.getElementById('sendButton').addEventListener('click', function() {
         voice(responseMessage);
         window.open('https://www.google.com', '_blank');
         
-    }else if (userInput.includes("open chatgpt")) {
+    }else if (userInput.includes("open chatgpt")|| userInput.includes("open chat gpt")) {
         responseMessage = "Opening ChatGPT...";
         document.getElementById('response').textContent = responseMessage;
         voice(responseMessage);

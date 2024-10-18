@@ -172,7 +172,7 @@ document.getElementById('sendButton').addEventListener('click', function() {
         responseMessage = "Ritwika Mahapatra is the most beautiful girl of this planet. She is a Computer science engineer. She is very cheerful and full of virtues. My creator loves her a lot. According to him she is his bubu. ";
         document.getElementById('response').textContent = responseMessage;
         voice(responseMessage);
-    }  else if(userInput=="how are you") {
+    }  else if(userInput.includes("how are you")) {
          responseMessage="I am doing great!!! Hope you are also good."
          document.getElementById('response').textContent = responseMessage;
          voice(responseMessage);

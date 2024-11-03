@@ -320,7 +320,7 @@ document.getElementById('sendButton').addEventListener('click', function() {
 
 
 
-    if (userInput === 'hello') {
+    if (userInput.includes('hello')) {
 
         responseMessage = "Hello, I am AI-Abhi, Your personal AI assistant created by Abhishek Bhattacharjee. How can I help you?";
 
@@ -480,7 +480,7 @@ document.getElementById('sendButton').addEventListener('click', function() {
 
 function handleSearch(userInput) {
 
-    const searchPatterns = ["search", "search about", "about", "what is", "tell me about","who is", "who are","what are"];
+    const searchPatterns = ["search", "search about", "about", "what is","who is", "who are","what are","how to make","how to play","tell me about","tell me something about","what about","write about","write something about","say about","say something about"];
 
     let searchQuery = userInput.toLowerCase();
 

@@ -526,7 +526,7 @@ function searchWikipedia(query) {
 
             if (data.extract) {
 
-                responseMessage = `Here is a brief summary from the Internet: ${data.extract}`;
+                responseMessage = `${data.extract}`;
 
                 document.getElementById('response').textContent = responseMessage;
 

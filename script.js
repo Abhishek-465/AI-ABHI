@@ -479,32 +479,40 @@ document.getElementById('sendButton').addEventListener('click', function() {
 // Function to handle search phrases
 
 function handleSearch(userInput) {
-
-    const searchPatterns = ["search", "search about", "about", "what is","who is", "who are","what are","how to make","how to play","tell me about","tell me something about","what about","write about","write something about","say about","say something about"];
+    const searchPatterns = [
+        "search",
+        "search about",
+        "about",
+        "what is",
+        "who is",
+        "who are",
+        "what are",
+        "how to make",
+        "how to play",
+        "tell me about",
+        "tell me something about",
+        "what about",
+        "write about",
+        "write something about",
+        "say about",
+        "say something about"
+    ];
 
     let searchQuery = userInput.toLowerCase();
 
-
-
     searchPatterns.forEach(pattern => {
-
-        searchQuery = searchQuery.replace(pattern, '').trim();
-
+        const regex = new RegExp(`\\b${pattern}\\b`, 'g'); // Match whole words and replace globally
+        searchQuery = searchQuery.replace(regex, '').trim();
     });
 
-
-
     if (searchQuery) {
-
         searchWikipedia(searchQuery);
-
     } else {
-
         document.getElementById('response').textContent = "Sorry, I didn't understand your query. Please try again. Try to correct the spellings and do not use any punctuations.";
-
     }
-
 }
+
+ 
 
 
 
